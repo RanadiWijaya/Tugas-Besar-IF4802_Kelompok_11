@@ -1,2 +1,3 @@
 # Tugas-Besar-IF4802_Kelompok_11
-Rancanglah multi-linked list yang memodelkan mobil, sales, dan hubungan di antara mereka. Seorang sales dapat mempromosikan banyak mobil, dan satu mobil dapat dipromosikan oleh banyak sales. Program ditujukan untuk mengelola penjualan suatu showroom serta memantau performa sales.
+TOPIK 22
+Rancanglah multi-linked list yang memodelkan guru, mata pelajaran, dan hubungan diantara mereka. Seorang guru dapat mengajar lebih daru satu mata pelajaran, dan satu mata pelajaran hanya diajar oleh satu guru. Program anda harus mengimplementasikan daftar dan semua fitur yang tercantuk di bawah ini.
