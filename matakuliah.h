@@ -2,39 +2,27 @@
 #define MATAKULIAH_H_INCLUDED
 using namespace std;
 //sll
-//mata kuliah sebagai child
+//mata kuliah sebagai child dll
 
 struct mataKuliah{
     string namaMatkul;
     string idMatkul
 };
 typedef mataKuliah infotype;
-typedef struct elmMataKuliahSLL *addrSll;
-typedef struct elmMataKuliahDLL *addrDll;
+typedef struct elmMataKuliah *address;
 
-
-//SLL
-
-struct elmMataKuliahSLL {
-    infotype info;
-    addrSll next;
-}
-
-struct ListMatkulSLL{
-    addrSll first;
-};
 
 //DLL
 
-struct elmMataKuliahDLL {
+struct elmMataKuliah {
     infotype info;
-    addrDll next;
-    addrDll prev;
+    address next;
+    address prev;
 }
 
-struct ListMatkulDLL{
-    addrDll first;
-    addrDll Last;
+struct ListMatkul{
+    address first;
+    address Last;
 };
 
 
