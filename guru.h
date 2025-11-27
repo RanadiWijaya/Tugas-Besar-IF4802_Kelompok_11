@@ -2,45 +2,29 @@
 #define GURU_H_INCLUDED
 using namespace std;
 
-//guru sebagai parent
+//guru sebagai parent sll
 
 struct guru{
     string namaGuru;
     string idGuru;
 };
 typedef guru infotype;
-typedef struct elmGuruSLL *addrSll;
-typedef struct elmGuruDLL *addrDll;
+typedef struct elmGuru *address;
+
 //SLL
 
-struct elmGuruSLL {
+struct elmGuru {
     infotype info;
-    addrSll next;
-    addrSll matKul; //untuk ke child matkul
+    address next;
+    address matKul; //untuk ke child matkul
 }
 
-struct ListGuruSLL{
-    addrSll first;
+struct ListGuru{
+    address first;
 };
 
-//DLL
-
-struct elmGuruDLL {
-    infotype info;
-    addrDll next;
-    addrDll prev;
-}
-
-struct ListGuruDLL{
-    addrDll first;
-    addrDll Last;
-};
-
-
-void createListGuruSll(ListGuruSLL &L);
-void createListGuruDll(ListGuruDLL &L);
+void createListGuruSll(ListGuru &L);
 address createElmGuruSll(infotype x);
-address createElmGuruDll(infotype x);
-void insertFirstGuruSLL(ListGuruSLL &L, address p);
+void insertFirstGuruSLL(ListGuru &L, address p);
 
 #endif // GURU_H_INCLUDED
