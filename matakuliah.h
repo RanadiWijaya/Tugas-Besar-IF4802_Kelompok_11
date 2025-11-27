@@ -9,30 +9,32 @@ struct mataKuliah{
     string idMatkul
 };
 typedef mataKuliah infotype;
-typedef struct elmMataKuliah *address;
+typedef struct elmMataKuliahSLL *addrSll;
+typedef struct elmMataKuliahDLL *addrDll;
+
 
 //SLL
 
-typedef elmMataKuliahSLL {
+struct elmMataKuliahSLL {
     infotype info;
-    address next;
+    addrSll next;
 }
 
 struct ListMatkulSLL{
-    address first;
+    addrSll first;
 };
 
 //DLL
 
-typedef elmMataKuliahDLL {
+struct elmMataKuliahDLL {
     infotype info;
-    address next;
-    address prev;
+    addrDll next;
+    addrDll prev;
 }
 
 struct ListMatkulDLL{
-    address first;
-    address Last;
+    addrDll first;
+    addrDll Last;
 };
 
 
