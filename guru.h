@@ -6,7 +6,7 @@ using namespace std;
 
 struct guru{
     string namaGuru;
-    string idGuru
+    string idGuru;
 };
 typedef guru infotype;
 typedef struct elmGuru *address;
@@ -36,5 +36,11 @@ struct ListGuruDLL{
     address Last;
 };
 
+
+void createListGuruSll(ListGuruSLL &L);
+void createListGuruDll(ListGuruDLL &L);
+address createElmGuruSll(infotype x);
+address createElmGuruDll(infotype x);
+void insertFirstGuruSLL(ListGuruSLL &L, address p);
 
 #endif // GURU_H_INCLUDED
