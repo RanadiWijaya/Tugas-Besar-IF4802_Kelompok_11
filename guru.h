@@ -1,9 +1,12 @@
 #ifndef GURU_H_INCLUDED
 #define GURU_H_INCLUDED
+#include <string>>
+
 using namespace std;
 
-//guru sebagai parent sll
 
+
+//guru sebagai parent sll
 struct guru{
     string namaGuru;
     string idGuru;
@@ -15,7 +18,7 @@ struct elmGuru {
     infotype info;
     address next;
     address matKul; //untuk ke child matkul
-}
+};
 
 struct ListGuru{
     address first;
