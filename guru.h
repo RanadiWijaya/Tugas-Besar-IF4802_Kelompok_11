@@ -11,13 +11,16 @@ struct guru{
     string namaGuru;
     string idGuru;
 };
-typedef guru infotype;
+typedef guru infoGuru;
 typedef struct elmGuru *adrGuru;
 
+typedef struct elmMataKuliah *adrMatkul;
+struct elmMataKuliah;
+
 struct elmGuru {
-    infotype info;
+    infoGuru info;
     adrGuru next;
-    adrGuru matKul; //untuk ke child matkul
+    adrMatkul firstMatKul; //untuk ke child matkul
 };
 
 struct ListGuru{
@@ -25,7 +28,7 @@ struct ListGuru{
 };
 
 void createListGuru(ListGuru &L);
-adrGuru createElmGuru(infotype x);
+adrGuru createElmGuru(infoGuru x);
 void insertFirstGuru(ListGuru &L, adrGuru p);
 void insertLastGuru(ListGuru &L, adrGuru p);
 void insertAfterGuru(ListGuru &L, adrGuru prec, adrGuru p);
