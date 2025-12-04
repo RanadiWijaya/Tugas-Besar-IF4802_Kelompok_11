@@ -12,29 +12,29 @@ struct guru{
     string idGuru;
 };
 typedef guru infotype;
-typedef struct elmGuru *address;
+typedef struct elmGuru *adrGuru;
 
 struct elmGuru {
     infotype info;
-    address next;
-    address matKul; //untuk ke child matkul
+    adrGuru next;
+    adrGuru matKul; //untuk ke child matkul
 };
 
 struct ListGuru{
-    address first;
+    adrGuru first;
 };
 
 void createListGuru(ListGuru &L);
-address createElmGuru(infotype x);
-void insertFirstGuru(ListGuru &L, address p);
-void insertLastGuru(ListGuru &L, address p);
-void insertAfterGuru(ListGuru &L, address prec, address p);
-void insertBeforeGuru(ListGuru &L, address prec, address p);
-void deleteFirstGuru(ListGuru &L, address p);
-void deleteLastGuru(ListGuru &L, address p);
-void deleteAfterGuru(ListGuru &L, address prec, address p);
-void deleteBeforeGuru(ListGuru &L, address p);
-void SearchGuru(ListGuru L, address p);
+adrGuru createElmGuru(infotype x);
+void insertFirstGuru(ListGuru &L, adrGuru p);
+void insertLastGuru(ListGuru &L, adrGuru p);
+void insertAfterGuru(ListGuru &L, adrGuru prec, adrGuru p);
+void insertBeforeGuru(ListGuru &L, adrGuru prec, adrGuru p);
+void deleteFirstGuru(ListGuru &L, adrGuru p);
+void deleteLastGuru(ListGuru &L, adrGuru p);
+void deleteAfterGuru(ListGuru &L, adrGuru prec, adrGuru p);
+void deleteBeforeGuru(ListGuru &L, adrGuru p);
+void SearchGuru(ListGuru L, adrGuru p);
 int hitungGuru(ListGuru L);
 void showAllData(ListGuru L);
 void showGuru(ListGuru L);
