@@ -10,6 +10,7 @@ using namespace std;
 struct guru{
     string namaGuru;
     string idGuru;
+    string kelas;
 };
 typedef guru infoGuru;
 typedef struct elmGuru *adrGuru;
@@ -37,7 +38,7 @@ void deleteFirstGuru(ListGuru &L, adrGuru &p);
 void deleteLastGuru(ListGuru &L, adrGuru &p);
 void deleteAfterGuru(ListGuru &L, adrGuru prec, adrGuru &p);
 void deleteBeforeGuru(ListGuru &L, adrGuru prec, adrGuru &p);
-void SearchGuru(ListGuru L, adrGuru p);
+void SearchGuru(ListGuru L, string nama, adrGuru p);
 int hitungGuru(ListGuru L);
 void showAllData(ListGuru L);
 void showGuru(ListGuru L);
