@@ -1,7 +1,7 @@
 #ifndef MATAKULIAH_H_INCLUDED
 #define MATAKULIAH_H_INCLUDED
 #include <iostream>
-#include <string>       
+#include <string>
 
 using namespace std;
 //mata kuliah sebagai child dll
@@ -9,6 +9,7 @@ using namespace std;
 struct mataKuliah{
     string namaMatkul;
     string idMatkul;
+    string jam;
 };
 
 
@@ -41,3 +42,4 @@ int hitungMatkul(ListMatkul L);
 void showMatkul(ListMatkul L);
 
 #endif // MATAKULIAH_H_INCLUDED
+
