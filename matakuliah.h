@@ -9,7 +9,7 @@ using namespace std;
 struct mataKuliah{
     string namaMatkul;
     string idMatkul;
-    string jam;
+    int jam;
 };
 
 
@@ -32,14 +32,13 @@ adrMatkul createElmMatkul(infotype x);
 void insertFirstMatkul(ListMatkul &L, adrMatkul p);
 void insertLastMatkul(ListMatkul &L, adrMatkul p);
 void insertAfterMatkul(ListMatkul &L, adrMatkul prec, adrMatkul p);
-void insertBeforeMatkul(ListMatkul &L, adrMatkul prec, adrMatkul p);
-void deleteFirstMatkul(ListMatkul &L, adrMatkul p);
-void deleteLastMatkul(ListMatkul &L, adrMatkul p);
-void deleteAfterMatkul(ListMatkul &L, adrMatkul prec, adrMatkul p);
-void deleteBeforeMatkul(ListMatkul &L, adrMatkul p);
-void SearchMatkul(ListMatkul L, adrMatkul p);
+void deleteFirstMatkul(ListMatkul &L, adrMatkul &p);
+void deleteLastMatkul(ListMatkul &L, adrMatkul &p);
+void deleteAfterMatkul(ListMatkul &L, adrMatkul prec, adrMatkul &p);
+void SearchMatkul(ListMatkul L, adrMatkul &p);
 int hitungMatkul(ListMatkul L);
 void showMatkul(ListMatkul L);
 
 #endif // MATAKULIAH_H_INCLUDED
+
 
