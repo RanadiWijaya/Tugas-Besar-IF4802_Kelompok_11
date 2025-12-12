@@ -33,14 +33,13 @@ adrGuru createElmGuru(infoGuru x);
 void insertFirstGuru(ListGuru &L, adrGuru p);
 void insertLastGuru(ListGuru &L, adrGuru p);
 void insertAfterGuru(ListGuru &L, adrGuru prec, adrGuru p);
-void insertBeforeGuru(ListGuru &L, adrGuru prec, adrGuru p);
 void deleteFirstGuru(ListGuru &L, adrGuru &p);
 void deleteLastGuru(ListGuru &L, adrGuru &p);
 void deleteAfterGuru(ListGuru &L, adrGuru prec, adrGuru &p);
-void deleteBeforeGuru(ListGuru &L, adrGuru prec, adrGuru &p);
 void SearchGuru(ListGuru L, string nama, adrGuru p);
 int hitungGuru(ListGuru L);
 void showAllData(ListGuru L);
 void showGuru(ListGuru L);
 
 #endif // GURU_H_INCLUDED
+
