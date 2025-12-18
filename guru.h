@@ -1,6 +1,6 @@
 #ifndef GURU_H_INCLUDED
 #define GURU_H_INCLUDED
-#include <string>>
+#include <string>
 
 using namespace std;
 
@@ -36,10 +36,9 @@ void insertAfterGuru(ListGuru &L, adrGuru prec, adrGuru p);
 void deleteFirstGuru(ListGuru &L, adrGuru &p);
 void deleteLastGuru(ListGuru &L, adrGuru &p);
 void deleteAfterGuru(ListGuru &L, adrGuru prec, adrGuru &p);
-void SearchGuru(ListGuru L, string nama, adrGuru p);
+void SearchGuru(ListGuru L, string nama, adrGuru &p);
 int hitungGuru(ListGuru L);
 void showAllData(ListGuru L);
-void showGuru(ListGuru L);
+void showGuru(adrGuru p);
 
 #endif // GURU_H_INCLUDED
-
