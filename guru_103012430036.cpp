@@ -13,20 +13,19 @@ adrGuru createElmGuru(infoGuru x){
     return p;
 }
 void insertFirstGuru(ListGuru &L, adrGuru p){
-    if(L.first != nullptr){
-        L.first = p;
-    }else{
-        p->next =L.first;
-        L.first = p;
-    }
+    p->next = L.first;
+    L.first = p;
 }
 void insertLastGuru(ListGuru &L, adrGuru p){
-    adrGuru q;
-    q = L.first;
-    while (q->next != nullptr){
-        q =q->next;
+    if(L.first == nullptr){
+        L.first = p;
+    }else{
+        adrGuru q = L.first;
+        while(q->next != nullptr){
+            q = q->next;
+        }
+        q->next = p;
     }
-    q->next = p;
 }
 
 void deleteAfterGuru(ListGuru &L, adrGuru prec, adrGuru &p){
@@ -40,16 +39,11 @@ void deleteAfterGuru(ListGuru &L, adrGuru prec, adrGuru &p){
 }
 
 void SearchGuru(ListGuru L, string nama, adrGuru &p){
-    if(L.first != nullptr){
-        adrGuru q;
-        q = L.first;
-        while((q != nullptr) && (q->info.namaGuru != nama)){
-            q =q->next;
-        }
-        p =q;
-    }else{
-        cout<<"Daftar Guru tidak ada. "<<endl;
+    p = L.first;
+    while(p != nullptr && p->info.namaGuru != nama){
+        p = p->next;
     }
+
 }
 
 void showAllData(ListGuru L){
@@ -76,4 +70,3 @@ void showAllData(ListGuru L){
         }
     }
 }
-
