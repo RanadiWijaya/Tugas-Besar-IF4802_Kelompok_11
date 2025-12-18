@@ -6,9 +6,9 @@
 
 using namespace std;
 
-void menuAdmin(ListGuru &LG);
-void menuGuru(ListGuru &LG);
-void menuMataKuliah(ListGuru &LG);
+void menuAdmin();
+void menuGuru(ListGuru &L);
+void menuMataKuliah(ListGuru &L);
 
-void menuUser(ListGuru &LG);
+void menuUser();
 #endif // MAIN_H_INCLUDED
