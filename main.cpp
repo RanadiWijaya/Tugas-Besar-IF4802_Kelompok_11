@@ -8,8 +8,6 @@ int main()
     int option=-99;
     while (option != 0) {
       
-        ListGuru LG;
-        adrGuru AG;
 
         system("cls");
         cout << "============ Menu ============ " << endl;
