@@ -9,7 +9,7 @@ using namespace std;
 struct mataKuliah{
     string namaMatkul;
     string idMatkul;
-    string jam; //berapa jam matakuliah tersebut(sks)
+    int jam; //berapa jam matakuliah tersebut(sks)
 };
 
 
@@ -44,4 +44,5 @@ int hitungMatkul(adrGuru g);
 void showMatkul(adrGuru g);
 
 #endif // MATAKULIAH_H_INCLUDED
+
 
