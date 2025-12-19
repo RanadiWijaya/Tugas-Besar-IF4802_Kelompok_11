@@ -22,19 +22,18 @@ void deleteFirstGuru(ListGuru &L, adrGuru &p){
 }
 void deleteLastGuru(ListGuru &L, adrGuru &p){
     if(L.first == nullptr){
-        cout<< "Daftar Guru tidak ada. "<<endl;
-    }else if(L.first->next == nullptr){// kondisi 1
-      L.first = nullptr;
+        cout << "Daftar Guru tidak ada." << endl;
+    }else if(L.first->next == nullptr){
+        p = L.first;
+        L.first = nullptr;
     }else{
-        adrGuru q;
-        q =L.first;
+        adrGuru q = L.first;
         while(q->next->next != nullptr){
             q = q->next;
         }
         p = q->next;
         q->next = nullptr;
     }
-
 }
 
 
@@ -49,21 +48,22 @@ int hitungGuru(ListGuru L){
     return total;
 }
 
-void showGuru(ListGuru L){
-    if(L.first == nullptr){
-        cout<<"Data Guru tidak ada. "<<endl;
-    }else{
-        adrGuru p;
-        p = L.first;
-        cout<<"===== GURU ====="<<endl;
-        while(p != nullptr){
-            cout<<"Nama: "<<p->info.namaGuru<<endl;
-            cout<<"ID: "<<p->info.idGuru<<endl;
-            cout<<"Kelas: "<<p->info.kelas<<endl;
-            cout<<"."<<endl;
-            cout<<"------------------------"<<endl;
-            p = p->next;
-        }
+void showGuru(adrGuru p){// ubah procedure show guru jadi show yang spefik
+   if(p == nullptr){
+        cout << "Guru tidak ditemukan." << endl;
+        return;
     }
+    adrMatkul q;
+    cout<<"===== GURU ====="<<endl;
+    cout<<"Nama: "<<p->info.namaGuru<<endl;
+    cout<<"ID: "<<p->info.idGuru<<endl;
+    cout<<"Kelas: "<<p->info.kelas<<endl;
+    cout<<"Mata Kuliah: ";
+    q = p->firstMatKul;
+    while(q != nullptr){
+        cout<< q->info.idMatkul<< ", ";
+        q = q->next;
+    }
+    cout<<endl;
 }
 
