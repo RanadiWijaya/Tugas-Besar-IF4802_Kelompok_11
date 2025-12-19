@@ -1,4 +1,4 @@
-
+#include "guru.h"
 #include "matakuliah.h"
 #include <iostream>
 
@@ -10,61 +10,77 @@ adrMatkul createElmMatkul(infotype x) {
     return p;
 };
 
-void isnertFirstMatkul(ListMatkul &L, adrMatkul p) {
-    if (L.first == nullptr) {
-        L.first = p;
-        L.last = p;
-    } else {
-        p->next = L.first;
-        L.first->prev = p;
-        L.first = p;
+void insertFirstMatkul(adrGuru &g, adrMatkul p) {
+    if(g == nullptr){
+      cout<<"Alamat guru tidak ada. "<<endl;
+      return;
+    }
+    if(g->firstMatKul == nullptr){
+        g->firstMatKul = p;
+    }else{
+        p->next = g->firstMatKul;
+        g->firstMatKul->prev = p;
+        g->firstMatKul = p;
     }
 };
 
-void insertLastMatkul(ListMatkul &L, adrMatkul p) {
-    if (L.first == nullptr) {
-        L.first = p;
-        L.last = p;
-    } else {
-        L.last->next = p;
-        p->prev = L.last;
-        L.last = p;
+void insertLastMatkul(adrGuru &g, adrMatkul p) {
+    if(g == nullptr){
+      cout<<"Alamat guru tidak ada. "<<endl;
+      return;
+    }
+    if(g->firstMatKul == nullptr){
+        g->firstMatKul = p;
+    }else{
+        adrMatkul q = g->firstMatKul;
+        while(q->next != nullptr){
+            q = q->next;
+        }
+        q->next = p;
+        p->prev = q;
     }
 };
+void deleteAfterMatkul(adrGuru &g, adrMatkul prec, adrMatkul &p){
+    if(g == nullptr || prec == nullptr || prec->next == nullptr){
+        p = nullptr;
+        return;
+    }
 
-void deleteAfteMatkul(ListMatkul &L, adrMatkul prec, adrMatkul &p){
-    if (prec != nullptr && prec -> next != nullptr){
-        p = prec -> next;
-        prec -> next = p -> next;
-        if (p -> next != nullptr){
-            p -> next -> prev = prec;
-        } else {
-            L.last = prec; // Update last if menghapus element terakhir
-        };
-        p -> next = nullptr;
-        p -> prev = nullptr;
-    };
+    p = prec->next;
+    prec->next = p->next;
+
+    if(p->next != nullptr){
+        p->next->prev = prec;
+    }
+
+    p->next = nullptr;
+    p->prev = nullptr;
 };
 
-adrMatkul SearchMatkul(ListMatkul L, string idMatlkul){
-    adrMatkul p = L.first;
-    while (p != nullptr){
-        if (p -> info.idMatkul == idMatlkul){
-            return p;
-        };
-        p = p -> next;
-    };
-    return nullptr;
+adrMatkul SearchMatkul(adrGuru g, string idMatkul){
+     if(g == nullptr){
+        return nullptr;
+    }
+    adrMatkul p;
+    p = g->firstMatKul;
+    while(p != nullptr && p->info.idMatkul != idMatkul){
+        p = p->next;
+    }
+    return p;
 };
 
-int hitungMatkul(ListMatkul L){
-    int count = 0;
-    adrMatkul p = L.first;
-    while (p != nullptr){
-        count++;
-        p = p -> next;
-    };
-    return count;
+int hitungMatkul(adrGuru g){
+    if(g == nullptr){
+        return 0;
+    }
+
+    int total = 0;
+    adrMatkul p;
+    p = g->firstMatKul;
+
+    while(p != nullptr){
+        total++;
+        p = p->next;
+    }
+    return total;
 };
-
-
