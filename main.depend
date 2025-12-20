@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1766179340 source:c:\coding\c++\test_tubes\main\guru_103012400390.cpp
+	"header.h"
+
+1766209092 c:\coding\c++\test_tubes\main\header.h
+	<iostream>
+	<string>
+
+1766179260 source:c:\coding\c++\test_tubes\main\guru_103012430036.cpp
+	"header.h"
+
+1766209051 source:c:\coding\c++\test_tubes\main\main_admin.cpp
+	<iostream>
+	"header.h"
+
+1766208701 source:c:\coding\c++\test_tubes\main\main_user.cpp
+	"header.h"
+
+1766179172 source:c:\coding\c++\test_tubes\main\matakuliah_103012400390.cpp
+	"header.h"
+
+1766179044 source:c:\coding\c++\test_tubes\main\matakuliah_103012430036.cpp
+	"header.h"
+
+1766209131 source:c:\coding\c++\test_tubes\main\main.cpp
+	<iostream>
+	"header.h"
+
